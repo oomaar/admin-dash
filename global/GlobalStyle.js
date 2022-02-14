@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 export const theme = {
     colors: {
@@ -42,4 +43,54 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Poppins', sans-serif;
   }
+
+  a {
+    color: ${({ theme }) => theme.colors.dark};
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 0.87rem;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+  }
+
+  h5 {
+    font-size: 0.77rem;
+  }
+
+  small {
+    font-size: 0.75rem;
+  }
+
+  p {
+    color: ${({ theme }) => theme.colors.darkVariant};
+  }
+
+  b {
+    color: ${({ theme }) => theme.colors.dark};
+  }
+`;
+
+export const ProfilePhoto = styled.div`
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
 `;

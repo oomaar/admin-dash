@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { Dashboard, Sidebar, Table, Widgets } from '../components';
 import { NextHead } from '../global/NextHead';
@@ -21,19 +22,22 @@ const Application = styled.main`
 `;
 
 const Home = () => {
+  const [toggleShow, setToggleShow] = useState(false);
+
   return (
     <Application>
       <NextHead title="Dashboard" />
 
-      <Sidebar />
+      <Sidebar toggleShow={toggleShow} setToggleShow={setToggleShow} />
       <div>
         <Dashboard />
         <Table />
       </div>
       <div>
-        <Widgets />
+        <Widgets setToggleShow={setToggleShow} />
       </div>
     </Application>
   );
 };
+
 export default Home;

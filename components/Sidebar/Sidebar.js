@@ -11,7 +11,7 @@ import {
     MessageCount,
 } from "./styledSidebar";
 
-export const Sidebar = () => {
+export const Sidebar = ({ toggleShow, setToggleShow }) => {
     const sidebarLinks = sidebarData.map(link => (
         <SidebarLink key={link.id}>
             <a href="#">
@@ -25,12 +25,12 @@ export const Sidebar = () => {
     ));
 
     return (
-        <SidebarContainer>
+        <SidebarContainer toggleShow={toggleShow}>
             <LogoContainer>
                 <Logo>
                     <h2><span>Fly</span> Dashboard</h2>
                 </Logo>
-                <CrossIcon>
+                <CrossIcon onClick={() => setToggleShow(false)}>
                     <FaTimes />
                 </CrossIcon>
             </LogoContainer>

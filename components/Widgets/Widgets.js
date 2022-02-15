@@ -21,7 +21,7 @@ import {
 } from "./styledWidgets";
 import { WidgetsData } from "../../data/widgetsData";
 
-export const Widgets = () => {
+export const Widgets = ({ setToggleShow }) => {
     const updatesData = WidgetsData.messages.map(update => (
         <Update key={update.id}>
             <ProfilePhoto>
@@ -51,7 +51,7 @@ export const Widgets = () => {
     return (
         <RightContainer>
             <Top>
-                <MenuButton><FaBars /></MenuButton>
+                <MenuButton onClick={() => setToggleShow(true)}><FaBars /></MenuButton>
                 <ThemeToggler>
                     <span className="active"><BsFillSunFill /></span>
                     <span><BsFillMoonFill /></span>

@@ -25,15 +25,19 @@ export const SidebarContainer = styled.aside`
   }
 
   @media screen and (max-width: 768px) {
-    position: fixed;
     left: 0;
-    width: 18rem;
     z-index: 3;
     height: 100vh;
+    position: fixed;
+    overflow: hidden;
     padding: ${({ theme }) => theme.pad.card};
+    transition: ${({ theme }) => theme.transition};
     background: ${({ theme }) => theme.colors.white};
+    opacity: ${({ toggleShow }) => toggleShow ? "1" : "0"};
+    width: ${({ toggleShow }) => toggleShow ? "18rem" : "0"};
     box-shadow: 1rem 3rem 4rem ${({ theme }) => theme.colors.white};
-    display: none;
+    visibility: ${({ toggleShow }) => toggleShow ? "visible" : "hidden"};
+    transform: ${({ toggleShow }) => toggleShow ? "translateX(0)" : "translateX(-200vw)"};
   }
 `;
 

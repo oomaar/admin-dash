@@ -57,23 +57,23 @@ export const tableRows = [
         cells: [
             {
                 id: "cell1",
-                text: "Foldable Mini Drone",
+                text: "RAM DDR4 8GB",
                 class: ""
             },
             {
                 id: "cell2",
-                text: "85631",
+                text: "36378",
                 class: ""
             },
             {
                 id: "cell3",
-                text: "Due",
+                text: "Refunded",
                 class: ""
             },
             {
                 id: "cell4",
-                text: "Pending",
-                class: "warning"
+                text: "Declined",
+                class: "danger"
             },
             {
                 id: "cell5",
@@ -87,12 +87,12 @@ export const tableRows = [
         cells: [
             {
                 id: "cell1",
-                text: "Foldable Mini Drone",
+                text: "Black Batman Custom",
                 class: ""
             },
             {
                 id: "cell2",
-                text: "85631",
+                text: "99137",
                 class: ""
             },
             {
@@ -117,23 +117,23 @@ export const tableRows = [
         cells: [
             {
                 id: "cell1",
-                text: "Foldable Mini Drone",
+                text: "Seagate 256GB SSD",
                 class: ""
             },
             {
                 id: "cell2",
-                text: "85631",
+                text: "13375",
                 class: ""
             },
             {
                 id: "cell3",
-                text: "Due",
+                text: "Paied",
                 class: ""
             },
             {
                 id: "cell4",
-                text: "Pending",
-                class: "warning"
+                text: "Delivered",
+                class: ""
             },
             {
                 id: "cell5",
@@ -147,23 +147,23 @@ export const tableRows = [
         cells: [
             {
                 id: "cell1",
-                text: "Foldable Mini Drone",
+                text: "Apple iPad Mini 64GB space-gray",
                 class: ""
             },
             {
                 id: "cell2",
-                text: "85631",
+                text: "753159",
                 class: ""
             },
             {
                 id: "cell3",
-                text: "Due",
+                text: "Paied",
                 class: ""
             },
             {
                 id: "cell4",
-                text: "Pending",
-                class: "warning"
+                text: "Delivered",
+                class: ""
             },
             {
                 id: "cell5",

@@ -34,6 +34,14 @@ export const TableCell = styled.td`
   height: 2.8rem;
   color: ${({ theme }) => theme.colors.darkVariant};
   border-bottom: 1px solid ${({ theme }) => theme.colors.light};
+
+  &.danger {
+    color: ${({ theme }) => theme.colors.danger};
+  }
+
+  &.warning {
+    color: ${({ theme }) => theme.colors.warning};
+  }
 `;
 
 export const TableRow = styled.tr`

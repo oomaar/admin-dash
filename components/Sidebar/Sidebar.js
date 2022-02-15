@@ -1,5 +1,4 @@
 import { FaTimes } from "react-icons/fa";
-import { HiOutlineLogout } from "react-icons/hi";
 import { sidebarData } from "../../data/sidebarData";
 import {
     SidebarContainer,
@@ -9,20 +8,28 @@ import {
     SidebarList,
     SidebarLink,
     SidebarIcon,
+    MessageCount,
 } from "./styledSidebar";
 
 export const Sidebar = () => {
     const sidebarLinks = sidebarData.map(link => (
         <SidebarLink key={link.id}>
-            <SidebarIcon>{link.icon}</SidebarIcon>
-            <span>{link.text}</span>
+            <a href="#">
+                <SidebarIcon>{link.icon}</SidebarIcon>
+                <h3>{link.text}</h3>
+                {link.count && (
+                    <MessageCount>{link.count}</MessageCount>
+                )}
+            </a>
         </SidebarLink>
     ));
 
     return (
         <SidebarContainer>
             <LogoContainer>
-                <Logo><span>Fly</span> Dashboard</Logo>
+                <Logo>
+                    <h2><span>Fly</span> Dashboard</h2>
+                </Logo>
                 <CrossIcon>
                     <FaTimes />
                 </CrossIcon>
@@ -30,10 +37,6 @@ export const Sidebar = () => {
             <SidebarList>
                 {sidebarLinks}
             </SidebarList>
-            <SidebarIcon>
-                <HiOutlineLogout />
-                <span>Logout</span>
-            </SidebarIcon>
         </SidebarContainer>
     );
 };

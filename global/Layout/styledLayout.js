@@ -5,5 +5,5 @@ export const Main = styled.main`
   gap: 1.8rem;
   margin: 0 auto;
   width: 96%;
-  grid-template-columns: 14rem auto 23rem;
+  grid-template-columns: 16rem auto 23rem;
 `;

@@ -4,6 +4,7 @@ import { GiPapers } from "react-icons/gi";
 import { AiOutlineStock, AiFillSetting } from "react-icons/ai";
 import { RiTodoLine } from "react-icons/ri";
 import { MdReportGmailerrorred } from "react-icons/md";
+import { HiOutlineLogout } from "react-icons/hi";
 
 export const sidebarData = [
     {
@@ -29,7 +30,8 @@ export const sidebarData = [
     {
         id: 5,
         text: "Messages",
-        icon: <BsEnvelope />
+        icon: <BsEnvelope />,
+        count: "26"
     },
     {
         id: 6,
@@ -50,5 +52,10 @@ export const sidebarData = [
         id: 9,
         text: "Add Product",
         icon: <BsPlus />
+    },
+    {
+        id: 10,
+        text: "Logout",
+        icon: <HiOutlineLogout />
     }
 ];

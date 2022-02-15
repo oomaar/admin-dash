@@ -1,7 +1,6 @@
 import { dashboardData } from "../../data/dashboardData";
 import {
     DashboardContainer,
-    DashboardTitle,
     DashboardDate,
     DashboardInsights,
     InsightsItem,
@@ -44,7 +43,7 @@ export const Dashboard = () => {
 
     return (
         <DashboardContainer>
-            <DashboardTitle>Dashboard</DashboardTitle>
+            <h1>Dashboard</h1>
             <DashboardDate>
                 <Input type="date" />
             </DashboardDate>

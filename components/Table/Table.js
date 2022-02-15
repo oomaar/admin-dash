@@ -3,18 +3,15 @@ import {
     TableContainer,
     TableTitle,
     TableLayout,
-    TableHead,
     TableRow,
-    TableHeading,
-    TableBody,
     TableCell,
 } from "./styledTable";
 
 export const Table = () => {
     const tableHeadingsData = tableHeadings.map(heading => (
-        <TableHeading key={heading.id}>
+        <th key={heading.id}>
             {heading.text}
-        </TableHeading>
+        </th>
     ));
 
     const tableRowsData = tableRows.map(row => (
@@ -31,14 +28,14 @@ export const Table = () => {
         <TableContainer>
             <TableTitle>Recent Orders</TableTitle>
             <TableLayout>
-                <TableHead>
+                <thead>
                     <TableRow>
                         {tableHeadingsData}
                     </TableRow>
-                </TableHead>
-                <TableBody>
+                </thead>
+                <tbody>
                     {tableRowsData}
-                </TableBody>
+                </tbody>
             </TableLayout>
             <a href="#">Show All</a>
         </TableContainer>

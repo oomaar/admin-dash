@@ -5,8 +5,6 @@ export const DashboardContainer = styled.div`
   margin-top: 1.4rem;
 `;
 
-export const DashboardTitle = styled.h1``;
-
 export const DashboardDate = styled.div`
   display: inline-block;
   background: ${({ theme }) => theme.colors.light};
@@ -74,10 +72,6 @@ export const InsightsLeft = styled.div`
   h3 {
     margin: 1rem 0 0.6rem;
     font-size: 1rem;
-  }
-
-  h1 {
-
   }
 `;
 

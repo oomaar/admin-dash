@@ -30,8 +30,6 @@ export const TableLayout = styled.table`
   }
 `;
 
-export const TableHead = styled.thead``;
-
 export const TableCell = styled.td`
   height: 2.8rem;
   color: ${({ theme }) => theme.colors.darkVariant};
@@ -43,7 +41,3 @@ export const TableRow = styled.tr`
     border: none;
   }
 `;
-
-export const TableHeading = styled.th``;
-
-export const TableBody = styled.tbody``;

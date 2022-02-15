@@ -26,9 +26,10 @@ export const theme = {
     card: "1.8rem",
     paddOne: "1.2rem"
   },
-  shadow: `0 2rem 3rem ${({ theme }) => theme.colors.light}`,
   transition: `all 300ms ease`
 };
+
+export const Shadow = `0 2rem 3rem #848bc82e`;
 
 export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {

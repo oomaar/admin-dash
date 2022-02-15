@@ -3,6 +3,11 @@ import { Shadow } from '../../global/GlobalStyle';
 
 export const RightContainer = styled.div`
   margin-top: 1.4rem;
+
+  @media screen and (max-width: 768px) {
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
 `;
 
 export const Top = styled.div`
@@ -10,6 +15,19 @@ export const Top = styled.div`
   justify-content: end;
   align-items: center;
   gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 0 0.8rem;
+    height: 4.6rem;
+    width: 100%;
+    z-index: 2;
+    background: ${({ theme }) => theme.colors.white};
+    box-shadow: 0 1rem 1rem ${({ theme }) => theme.colors.light};
+  }
 `;
 
 export const MenuButton = styled.button`
@@ -18,6 +36,16 @@ export const MenuButton = styled.button`
   cursor: pointer;
   background: transparent;
   display: none;
+
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    left: 1rem;
+    font-size: 2rem;
+    color: ${({ theme }) => theme.colors.dark};
+  }
 `;
 
 export const ThemeToggler = styled.div`
@@ -44,6 +72,12 @@ export const ThemeToggler = styled.div`
         border-radius: ${({ theme }) => theme.border.radiusOne};
     }
   }
+
+  @media screen and (max-width: 768px) {
+    width: 4.4rem;
+    position: absolute;
+    left: 66%;
+  }
 `;
 
 export const Profile = styled.div`
@@ -64,6 +98,10 @@ export const Info = styled.div`
 
   small {
 
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -103,6 +141,10 @@ export const Update = styled.div`
   grid-template-columns: 2.6rem auto;
   margin-bottom: 1rem;
   place-items: center;
+
+  @media screen and (max-width: 768px) {
+    place-items: unset;
+  }
 `;
 
 export const Message = styled.div`

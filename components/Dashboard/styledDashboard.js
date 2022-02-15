@@ -26,6 +26,16 @@ export const DashboardInsights = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
+  
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
 `;
 
 export const InsightsItem = styled.div`

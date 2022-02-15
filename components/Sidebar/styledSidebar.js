@@ -3,6 +3,38 @@ import styled from 'styled-components';
 export const SidebarContainer = styled.aside`
   height: 100vh;
   padding: 0.3rem;
+
+  h2 {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: inline;
+    }
+  }
+
+  h3 {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: inline;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    left: 0;
+    width: 18rem;
+    z-index: 3;
+    height: 100vh;
+    padding: ${({ theme }) => theme.pad.card};
+    background: ${({ theme }) => theme.colors.white};
+    box-shadow: 1rem 3rem 4rem ${({ theme }) => theme.colors.white};
+    display: none;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -23,6 +55,11 @@ export const CrossIcon = styled.div`
   cursor: pointer;
   color: ${({ theme }) => theme.colors.danger};
   display: none;
+
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+    cursor: pointer;
+  }
 `;
 
 export const SidebarList = styled.ul`
@@ -81,12 +118,31 @@ export const SidebarLink = styled.li`
     :hover ${SidebarIcon} {
       margin-left: 1rem;
     }
+
+    @media screen and (max-width: 1200px) {
+      width: 5.6rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: 3.4rem;
+    }
   }
 
   :last-child {
     position: absolute;
     bottom: 2rem;
     width: 100%;
+
+    @media screen and (max-width: 1200px) {
+      position: relative;
+      margin: 1.8rem 0 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      bottom: 5rem;
+    }
   }
 `;
 

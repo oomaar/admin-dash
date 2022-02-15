@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Dashboard, Sidebar, Table } from '../components';
+import { Dashboard, Sidebar, Table, Widgets } from '../components';
 import { NextHead } from '../global/NextHead';
 
 const Application = styled.main`
@@ -19,6 +19,9 @@ const Home = () => {
       <div>
         <Dashboard />
         <Table />
+      </div>
+      <div>
+        <Widgets />
       </div>
     </Application>
   );

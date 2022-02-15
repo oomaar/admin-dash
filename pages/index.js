@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { Dashboard, Sidebar, Table, Widgets } from '../components';
+import { darkTheme, GlobalStyle, theme } from '../global/GlobalStyle';
 import { NextHead } from '../global/NextHead';
 
 const Application = styled.main`
@@ -23,20 +25,28 @@ const Application = styled.main`
 
 const Home = () => {
   const [toggleShow, setToggleShow] = useState(false);
+  const [toggleDarkTheme, setToggleDarkTheme] = useState(false);
 
   return (
-    <Application>
-      <NextHead title="Dashboard" />
+    <ThemeProvider theme={toggleDarkTheme ? darkTheme : theme}>
+      <Application>
+        <GlobalStyle />
+        <NextHead title="Dashboard" />
 
-      <Sidebar toggleShow={toggleShow} setToggleShow={setToggleShow} />
-      <div>
-        <Dashboard />
-        <Table />
-      </div>
-      <div>
-        <Widgets setToggleShow={setToggleShow} />
-      </div>
-    </Application>
+        <Sidebar toggleShow={toggleShow} setToggleShow={setToggleShow} />
+        <div>
+          <Dashboard />
+          <Table />
+        </div>
+        <div>
+          <Widgets
+            toggleDarkTheme={toggleDarkTheme}
+            setToggleDarkTheme={setToggleDarkTheme}
+            setToggleShow={setToggleShow}
+          />
+        </div>
+      </Application>
+    </ThemeProvider>
   );
 };
 

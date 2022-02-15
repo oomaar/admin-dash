@@ -52,6 +52,10 @@ export const Logo = styled.div`
   span {
     color: ${({ theme }) => theme.colors.danger};
   }
+
+  h2 {
+    color: ${({ theme }) => theme.colors.titleColor};
+  }
 `;
 
 export const CrossIcon = styled.div`
@@ -152,7 +156,7 @@ export const SidebarLink = styled.li`
 
 export const MessageCount = styled.span`
   background: ${({ theme }) => theme.colors.danger};
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.titleColor};
   font-size: 11px;
   border-radius: ${({ theme }) => theme.border.radiusOne};
   padding: 2px 10px;

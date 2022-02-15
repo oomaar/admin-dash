@@ -3,6 +3,10 @@ import { Shadow } from '../../global/GlobalStyle';
 
 export const RightContainer = styled.div`
   margin-top: 1.4rem;
+  
+  h2 {
+    color: ${({ theme }) => theme.colors.titleColor};
+  }
 
   @media screen and (max-width: 768px) {
     width: 94%;
@@ -49,13 +53,14 @@ export const MenuButton = styled.button`
 `;
 
 export const ThemeToggler = styled.div`
-  background: ${({ theme }) => theme.colors.light};
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 1.6rem;
   width: 4.2rem;
   cursor: pointer;
+  background: ${({ theme }) => theme.colors.light};
+  color: ${({ theme }) => theme.colors.titleColor};
   border-radius: ${({ theme }) => theme.border.radiusOne};
 
   span {
@@ -67,9 +72,8 @@ export const ThemeToggler = styled.div`
     justify-content: center;
 
     &.active {
-        color: ${({ theme }) => theme.colors.white};
-        background: ${({ theme }) => theme.colors.primary};
-        border-radius: ${({ theme }) => theme.border.radiusOne};
+      background: ${({ theme }) => theme.colors.primary};
+      border-radius: ${({ theme }) => theme.border.radiusOne};
     }
   }
 
@@ -88,16 +92,12 @@ export const Profile = styled.div`
 `;
 
 export const Info = styled.div`
-  p {
-
-  }
-
-  b {
-
-  }
-
   small {
+    color: ${({ theme }) => theme.colors.titleColor};
+  }
 
+  h3 {
+    color: ${({ theme }) => theme.colors.titleColor};
   }
 
   @media screen and (max-width: 768px) {
@@ -109,14 +109,10 @@ export const ProfilePhoto = styled.div`
   width: 25px;
   height: 25px;
   border-radius: 50%;
-
-  img {
-  }
 `;
 
 export const RecentUpdates = styled.div`
   margin-top: 1rem;
-
 
   h2 {
     margin-bottom: 0.8rem;
@@ -142,22 +138,12 @@ export const Update = styled.div`
   margin-bottom: 1rem;
   place-items: center;
 
+  small {
+    color: ${({ theme }) => theme.colors.titleColor};
+  }
+
   @media screen and (max-width: 768px) {
     place-items: unset;
-  }
-`;
-
-export const Message = styled.div`
-  p {
-
-  }
-
-  b {
-
-  }
-
-  small {
-
   }
 `;
 
@@ -190,7 +176,7 @@ export const Icon = styled.div`
   padding: 0.6rem;
   border-radius: 50%;
   font-size: 1.6rem;
-  color: ${({ theme }) => theme.colors.white};
+  color: #fff;
   background: ${({ theme }) => theme.colors.primary};
 
   &.danger {
@@ -217,10 +203,6 @@ export const Right = styled.div`
     &.danger {
         color: ${({ theme }) => theme.colors.danger};
     }
-  }
-
-  h3 {
-
   }
 `;
 

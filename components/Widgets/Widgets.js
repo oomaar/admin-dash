@@ -12,7 +12,6 @@ import {
     RecentUpdates,
     Updates,
     Update,
-    Message,
     SalesAnalytics,
     ItemOutline,
     Icon,
@@ -21,16 +20,16 @@ import {
 } from "./styledWidgets";
 import { WidgetsData } from "../../data/widgetsData";
 
-export const Widgets = ({ setToggleShow }) => {
+export const Widgets = ({ toggleDarkTheme, setToggleDarkTheme, setToggleShow }) => {
     const updatesData = WidgetsData.messages.map(update => (
         <Update key={update.id}>
             <ProfilePhoto>
                 <img src={update.img} alt="User" />
             </ProfilePhoto>
-            <Message>
+            <div>
                 <p><b>{update.user}</b> {update.update}</p>
                 <small>{update.timeStamp}</small>
-            </Message>
+            </div>
         </Update>
     ));
 
@@ -53,8 +52,18 @@ export const Widgets = ({ setToggleShow }) => {
             <Top>
                 <MenuButton onClick={() => setToggleShow(true)}><FaBars /></MenuButton>
                 <ThemeToggler>
-                    <span className="active"><BsFillSunFill /></span>
-                    <span><BsFillMoonFill /></span>
+                    <span
+                        className={`${!toggleDarkTheme && "active"}`}
+                        onClick={() => setToggleDarkTheme(false)}
+                    >
+                        <BsFillSunFill />
+                    </span>
+                    <span
+                        className={`${toggleDarkTheme && "active"}`}
+                        onClick={() => setToggleDarkTheme(true)}
+                    >
+                        <BsFillMoonFill />
+                    </span>
                 </ThemeToggler>
                 <Profile>
                     <Info>

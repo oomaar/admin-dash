@@ -3,6 +3,7 @@ import { Shadow } from '../../global/GlobalStyle';
 
 export const DashboardContainer = styled.div`
   margin-top: 1.4rem;
+  color: ${({ theme }) => theme.colors.titleColor};
 `;
 
 export const DashboardDate = styled.div`
@@ -11,7 +12,6 @@ export const DashboardDate = styled.div`
   border-radius: ${({ theme }) => theme.border.radiusOne};
   margin-top: 1rem;
   padding: 0.5rem 1.6rem;
-
 `;
 
 export const Input = styled.input.attrs({ type: "date" })`
@@ -60,7 +60,7 @@ export const InsightsIcon = styled.span`
   padding: 0.5rem;
   border-radius: 50%;
   font-size: 2rem;
-  color: ${({ theme }) => theme.colors.white};
+  color: #fff;
   background: ${({ theme }) => theme.colors.primary};
 
   &.danger {

@@ -3,6 +3,7 @@ import { Shadow } from '../../global/GlobalStyle';
 
 export const TableContainer = styled.div`
   margin-top: 2rem;
+  color: ${({ theme }) => theme.colors.titleColor};
 
   a {
     text-align: center;

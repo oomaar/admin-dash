@@ -14,7 +14,37 @@ export const theme = {
     light: "#848bc82e",
     primaryVariant: "#111e88",
     darkVariant: "#677483",
-    bodyColor: "#f6f6f9"
+    bodyColor: "#f6f6f9",
+    titleColor: "#000"
+  },
+  border: {
+    card: "2rem",
+    radiusOne: "0.4rem",
+    radiusTwo: "0.8rem",
+    radiusThree: "1.2rem"
+  },
+  pad: {
+    card: "1.8rem",
+    paddOne: "1.2rem"
+  },
+  transition: `all 300ms ease`
+};
+
+export const darkTheme = {
+  colors: {
+    primary: "#7380ec",
+    white: "#202528",
+    dark: "#edeffd",
+    light: "#00000066",
+    darkVariant: "#a3bdcc",
+    bodyColor: "#181a1e",
+    danger: "#ff7782",
+    success: "#41f1b6",
+    warning: "#ffbb55",
+    infoDark: "#7d8da1",
+    infoLight: "#dce1eb",
+    primaryVariant: "#111e88",
+    titleColor: "#fff"
   },
   border: {
     card: "2rem",

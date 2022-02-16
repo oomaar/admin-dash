@@ -204,6 +204,10 @@ export const Right = styled.div`
         color: ${({ theme }) => theme.colors.danger};
     }
   }
+  
+  h3 {
+        color: ${({ theme }) => theme.colors.titleColor};
+    }
 `;
 
 export const AddProduct = styled.div`

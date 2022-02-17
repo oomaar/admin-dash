@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Shadow } from '../../global/GlobalStyle';
+import styled from "styled-components";
+import { Shadow } from "../../global/GlobalStyle";
 
 export const TableContainer = styled.div`
   margin-top: 2rem;
@@ -68,21 +68,25 @@ export const TableCell = styled.td`
     color: ${({ theme }) => theme.colors.warning};
   }
 
-    &:last-child,
-    &:first-child {
-      @media screen and (max-width: 1200px) {
-        display: none;
-      }
+  &:last-child,
+  &:first-child {
+    @media screen and (max-width: 1200px) {
+      display: none;
     }
+  }
 `;
 
 export const TableRow = styled.tr`
-    &:last-child th,
-    &:first-child th {
-      @media screen and (max-width: 1200px) {
-        display: none;
-      }
+  th {
+    font-size: 1.2rem;
+  }
+
+  &:last-child th,
+  &:first-child th {
+    @media screen and (max-width: 1200px) {
+      display: none;
     }
+  }
 
   :last-child ${TableCell} {
     border: none;
